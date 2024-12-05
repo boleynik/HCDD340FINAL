@@ -1,0 +1,12 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here -->
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#6A1B9A</item>
+        <item name="colorPrimaryDark">#4A148C</item>
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+</resources>
