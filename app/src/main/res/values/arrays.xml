@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reasons_array">
+        <item>Work or school stress</item>
+        <item>Family or relationship issues</item>
+        <item>Health concerns</item>
+        <item>Financial problems</item>
+        <item>Personal growth</item>
+        <item>Other</item>
+    </string-array>
+</resources>
