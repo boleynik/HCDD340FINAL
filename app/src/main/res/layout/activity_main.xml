@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDE7F6">
@@ -11,81 +12,74 @@
         android:id="@+id/topAppBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#6A1B9A"
+        android:background="#EC8FE0"
         android:title="muud"
         android:titleTextColor="#FFFFFF"
-        app:menu="@menu/top_app_bar_menu"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" /> <!-- Added margin for better spacing from the top -->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar_menu" /> <!-- Added margin for better spacing from the top -->
 
     <!-- Mindful Tip Header -->
     <TextView
-        android:id="@+id/tvTipHeader"
+        android:id="@+id/tipTitleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mindful tip of the day"
-        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tip_of_day_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/topAppBar"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
 
     <!-- Mindful Tip -->
     <TextView
-        android:id="@+id/tvTip"
+        android:id="@+id/tipTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="hydration can affect your mood: make sure to drink enough water!"
-        android:textSize="14sp"
-        android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/tvTipHeader"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:gravity="center" />
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/tip_of_day_actual"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tipTitleView" />
 
     <!-- Mood Log Count Header -->
     <TextView
-        android:id="@+id/tvLogCount"
+        android:id="@+id/readyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="you have logged: "
-        android:textSize="16sp"
+        android:layout_marginTop="48dp"
+        android:text="@string/ready_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/tvTip"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tipTextView" />
 
     <!-- Mood Log Count -->
-    <TextView
-        android:id="@+id/tvLogNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4 times! 🎉"
-        android:textSize="16sp"
-        android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/tvLogCount"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
 
     <!-- Log Mood Button -->
     <Button
         android:id="@+id/btnLogMood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="here we go!"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#E57373"
-        app:layout_constraintTop_toBottomOf="@id/tvLogNumber"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#EC8FE0"
+        android:padding="16dp"
+        android:text="@string/lets_go_button_text"
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
-        android:padding="10dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readyView" />
 
     <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -99,5 +93,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

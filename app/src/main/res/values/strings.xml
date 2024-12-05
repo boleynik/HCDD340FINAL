@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Final Project</string>
+    <string name="app_name">muud</string>
+    <string name="welcome">Welcome to muud!</string>
+    <string name="tip_of_day_title">Mindful tip of the day:</string>
+    <string name="tip_of_day_actual">Hydration can affect your mood: Make sure to drink enough water!</string>
+    <string name="ready_text">Ready to log your mood?</string>
+    <string name="lets_go_button_text">Let's go!</string>
+    <string name="about">About</string>
+    <string name="about_text">This is our mood-tracking app that we made for our HCDD 340 final. \n \n Made with love by Ben, Elyse, and John. </string>
+
 </resources>
