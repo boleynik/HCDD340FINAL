@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6">
+
+    <!-- Top Menu Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#6A1B9A"
+        android:title="muud"
+        android:titleTextColor="#FFFFFF"
+        app:menu="@menu/top_app_bar_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <!-- How are you feeling today? -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="how are you feeling today?"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Placeholder emojis -->
+            <TextView
+                android:id="@+id/emoji_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😊"
+                android:textSize="30sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/emoji_sad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😢"
+                android:textSize="30sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/emoji_angry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😡"
+                android:textSize="30sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/emoji_scared"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😳"
+                android:textSize="30sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/emoji_excited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😆"
+                android:textSize="30sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/emoji_bored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😑"
+                android:textSize="30sp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/emoji_love"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😍"
+                android:textSize="30sp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- How would you like to feel? -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="how would you like to feel?"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Placeholder emojis -->
+                <TextView
+                    android:id="@+id/emoji_happy_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😊"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/emoji_sad_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😢"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/emoji_angry_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😡"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/emoji_scared_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😳"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/emoji_excited_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😆"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/emoji_bored_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😑"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/emoji_love_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😍"
+                    android:textSize="30sp"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Why do you think you feel this way? -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="why do you think you feel this way?"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+
+            <Spinner
+                android:id="@+id/reason_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/reasons_array"
+                android:layout_marginTop="8dp" />
+
+            <!-- Additional input field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="anything else you’d like to share?"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:id="@+id/extra_input"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="begin typing..."
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:background="@android:drawable/edit_text" />
+
+            <!-- Submit button -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#6A1B9A"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
