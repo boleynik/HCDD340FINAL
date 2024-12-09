@@ -1,15 +1,21 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MoodLogActivity extends AppCompatActivity {
 
@@ -25,7 +31,31 @@ public class MoodLogActivity extends AppCompatActivity {
 
         // Load and display mood logs
         loadMoodLogs();
+
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        bottomNavigation.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        Toast.makeText(MoodLogActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.nav_moods:
+                        Toast.makeText(MoodLogActivity.this, "Moods clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MoodLogActivity.this, MoodLogActivity.class);
+                        startActivity(intent);
+                        return true;
+                    case R.id.nav_profile:
+                        Toast.makeText(MoodLogActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+                }
+                return false;
+            }
+        });
+
     }
+
+
 
     private void loadMoodLogs() {
         SharedPreferences sharedPreferences = getSharedPreferences("MoodTrackerPrefs", MODE_PRIVATE);

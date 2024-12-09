@@ -1,7 +1,11 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import static android.app.ProgressDialog.show;
+
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,7 +13,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import edu.psu.ist.hcdd340.finalproject.R;
 
@@ -41,6 +48,27 @@ public class MoodActivity extends AppCompatActivity {
 
         // Set submit button listener
         submitButton.setOnClickListener(v -> handleSubmit());
+
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        bottomNavigation.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_home:
+                        Toast.makeText(MoodActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+                    case R.id.nav_moods:
+                        Toast.makeText(MoodActivity.this, "Moods clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MoodActivity.this, MoodLogActivity.class);
+                        startActivity(intent);
+                        return true;
+                    case R.id.nav_profile:
+                        Toast.makeText(MoodActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     private void initializeViews() {
