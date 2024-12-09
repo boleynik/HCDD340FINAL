@@ -1,5 +1,6 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -109,6 +110,13 @@ public class MoodActivity extends AppCompatActivity {
                 + "Desired Mood: " + desiredMood + "\n"
                 + "Reason: " + reason + "\n"
                 + "Extra: " + extraMessage;
+
+        // Save log entry to SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("MoodTrackerPrefs", MODE_PRIVATE);
+        String existingLogs = sharedPreferences.getString("moodLogs", "");
+        sharedPreferences.edit().putString("moodLogs", existingLogs + summary + "\n").apply();
+
+        showToast("Mood logged successfully!");
 
         // Display as a Toast (or handle as needed)
         showToast(summary);
