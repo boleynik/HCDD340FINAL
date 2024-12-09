@@ -33,40 +33,31 @@ public class MoodLogActivity extends AppCompatActivity {
         loadMoodLogs();
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
-        bottomNavigation.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_home:
-                        Toast.makeText(MoodLogActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.nav_moods:
-                        Toast.makeText(MoodLogActivity.this, "Moods clicked", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MoodLogActivity.this, MoodLogActivity.class);
-                        startActivity(intent);
-                        return true;
-                    case R.id.nav_profile:
-                        Toast.makeText(MoodLogActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
-            }
-        });
-
+        NavigationHelper.setupBottomNavigation(this, bottomNavigation);
     }
 
 
 
     private void loadMoodLogs() {
+        moodLogContainer.removeAllViews(); // Clear existing logs
+
         SharedPreferences sharedPreferences = getSharedPreferences("MoodTrackerPrefs", MODE_PRIVATE);
         String moodLogs = sharedPreferences.getString("moodLogs", ""); // Default to empty if none
 
         if (!moodLogs.isEmpty()) {
             String[] logs = moodLogs.split("\n"); // Assuming each log is separated by a newline
             for (String log : logs) {
-                addLogToContainer(log);
+                if (!log.trim().isEmpty()) { // Skip any empty lines
+                    addLogToContainer(log);
+                }
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadMoodLogs();
     }
 
     private void addLogToContainer(String log) {

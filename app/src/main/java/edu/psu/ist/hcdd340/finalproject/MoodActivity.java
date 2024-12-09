@@ -50,25 +50,7 @@ public class MoodActivity extends AppCompatActivity {
         submitButton.setOnClickListener(v -> handleSubmit());
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
-        bottomNavigation.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_home:
-                        Toast.makeText(MoodActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.nav_moods:
-                        Toast.makeText(MoodActivity.this, "Moods clicked", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MoodActivity.this, MoodLogActivity.class);
-                        startActivity(intent);
-                        return true;
-                    case R.id.nav_profile:
-                        Toast.makeText(MoodActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
-            }
-        });
+        NavigationHelper.setupBottomNavigation(this, bottomNavigation);
     }
 
     private void initializeViews() {
@@ -150,6 +132,8 @@ public class MoodActivity extends AppCompatActivity {
         showToast(summary);
 
         // Clear form fields
+        Intent intent = new Intent(MoodActivity.this, MoodLogActivity.class);
+        startActivity(intent);
         extraInput.setText("");
     }
 

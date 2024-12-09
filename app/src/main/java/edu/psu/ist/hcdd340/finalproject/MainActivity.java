@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         tvLogNumber = findViewById(R.id.tvLogNumber);
         Button btnLogMood = findViewById(R.id.btnLogMood);
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        NavigationHelper.setupBottomNavigation(this, bottomNavigation);
 
         // Initialize the custom Toolbar
         androidx.appcompat.widget.Toolbar topAppBar = findViewById(R.id.topAppBar);
@@ -43,27 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 logCount++; // Increment mood log count
                 tvLogNumber.setText(logCount + " times! 🎉");
                 Toast.makeText(MainActivity.this, "Mood logged successfully!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // Handle bottom navigation bar item clicks
-        bottomNavigation.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_home:
-                        Toast.makeText(MainActivity.this, "Home clicked", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.nav_moods:
-                        Toast.makeText(MainActivity.this, "Moods clicked", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, MoodLogActivity.class);
-                        startActivity(intent);
-                        return true;
-                    case R.id.nav_profile:
-                        Toast.makeText(MainActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
             }
         });
     }
