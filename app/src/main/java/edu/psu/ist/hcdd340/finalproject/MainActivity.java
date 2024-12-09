@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         btnLogMood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MoodActivity.class);
+                startActivity(intent);
                 logCount++; // Increment mood log count
                 tvLogNumber.setText(logCount + " times! 🎉");
                 Toast.makeText(MainActivity.this, "Mood logged successfully!", Toast.LENGTH_SHORT).show();
