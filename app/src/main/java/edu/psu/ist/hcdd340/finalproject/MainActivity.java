@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.nav_moods:
                         Toast.makeText(MainActivity.this, "Moods clicked", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, MoodLogActivity.class);
+                        startActivity(intent);
                         return true;
                     case R.id.nav_profile:
                         Toast.makeText(MainActivity.this, "Profile clicked", Toast.LENGTH_SHORT).show();
