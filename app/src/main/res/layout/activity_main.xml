@@ -97,7 +97,7 @@
         android:backgroundTint="#9C27B0"
         android:padding="16dp"
         android:text="@string/lets_go_button_text"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
