@@ -60,7 +60,7 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current Mood: Happy" />
+                android:text="Current Mood: Stressed" />
 
             <TextView
                 android:id="@+id/desired_mood"
@@ -74,7 +74,7 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reason: Personal Growth" />
+                android:text="Reason: Work" />
         </LinearLayout>
     </LinearLayout>
 
