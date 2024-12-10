@@ -18,43 +18,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/top_app_bar_menu" />
 
-    <!-- Scrollable Content -->
-    <ScrollView
-        android:id="@+id/scrollView"
+    <!-- RecyclerView for Mood Logs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/moodRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- ViewSwitcher to toggle between empty state and logs -->
-        <ViewSwitcher
-            android:id="@+id/moodLogSwitcher"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Empty state message -->
-            <TextView
-                android:id="@+id/emptyStateText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No mood logs yet!"
-                android:layout_gravity="center"
-                android:textSize="18sp"
-                android:textColor="#9E9E9E" />
-
-            <!-- Container for mood logs -->
-            <LinearLayout
-                android:id="@+id/moodLogContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp" />
-        </ViewSwitcher>
-    </ScrollView>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Bottom Navigation Bar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -69,3 +42,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
