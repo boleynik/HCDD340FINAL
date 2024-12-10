@@ -9,15 +9,15 @@
     <!-- Top Menu Bar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topAppBar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#D1C4E9"
+        android:background="#9C27B0"
         android:title="muud"
-        android:titleTextColor="#6A1B9A"
-        app:menu="@menu/top_app_bar_menu"
-        app:layout_constraintTop_toTopOf="parent"
+        android:titleTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar_menu" />
 
     <!-- Scrollable Content -->
     <ScrollView
@@ -41,7 +41,7 @@
                 android:id="@+id/log_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="december 1, 2024"
+                android:text="December 1, 2024"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="you were stressed: 😟"
+                    android:text="You were stressed: 😟"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -68,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="you wanted to be happy: 😃"
+                    android:text="You wanted to be happy: 😃"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="reason for stress: work 💼"
+                    android:text="Reason for stress: work 💼"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -86,7 +86,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:text="time logged: 11:59 pm"
+                    android:text="Time logged: 11:59 pm"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginBottom="16dp"
-                    android:text="your activity:"
+                    android:text="Your Activity:"
                     android:textColor="#000000"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#C8E6C9"
-                android:text="Playlist: To give you joy"
+                android:text="Playlist: Joyful Music"
                 android:textColor="#1B5E20"
                 android:layout_marginBottom="12dp" />
 
@@ -158,9 +158,9 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#D1C4E9"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        android:background="#9C27B0"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:menu="@menu/bottom_navigation_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

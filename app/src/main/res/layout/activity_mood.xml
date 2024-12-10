@@ -11,13 +11,13 @@
         android:id="@+id/topAppBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#6A1B9A"
+        android:background="#9C27B0"
         android:title="muud"
         android:titleTextColor="#FFFFFF"
-        app:menu="@menu/top_app_bar_menu"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar_menu" />
 
     <!-- Scrollable Content -->
     <ScrollView
@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="how are you feeling today?"
+            android:text="How are you feeling today?"
             android:textSize="18sp"
             android:layout_marginBottom="8dp" />
 
@@ -109,7 +109,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="how would you like to feel?"
+            android:text="How would you like to feel?"
             android:textSize="18sp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp" />
@@ -181,7 +181,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="why do you think you feel this way?"
+                android:text="Why do you think you feel this way?"
                 android:textSize="18sp"
                 android:layout_marginTop="16dp" />
 
@@ -197,7 +197,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="anything else you’d like to share?"
+                android:text="Anything else you’d like to share?"
                 android:textSize="18sp"
                 android:layout_marginTop="16dp" />
 
@@ -205,7 +205,7 @@
                 android:id="@+id/extra_input"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:hint="begin typing..."
+                android:hint="Begin typing..."
                 android:gravity="top"
                 android:inputType="textMultiLine"
                 android:background="@android:drawable/edit_text" />
@@ -227,7 +227,7 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#6A1B9A"
+        android:background="#9C27B0"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_navigation_menu"
