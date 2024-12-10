@@ -49,28 +49,30 @@ public class MoodLogActivity extends AppCompatActivity {
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
     }
 
-
-
     private List<MoodLogEntry> loadMoodLogs() {
-        SharedPreferences sharedPreferences = getSharedPreferences("MoodLog", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("MoodTrackerPrefs", MODE_PRIVATE);
         List<MoodLogEntry> moodLogs = new ArrayList<>();
 
-        int logCount = sharedPreferences.getInt("logCount", 0);
-        Log.d("MoodLogActivity", "Log count: " + logCount); // Debugging log
+        // Retrieve the stored logs string
+        String existingLogs = sharedPreferences.getString("moodLogs", "");
 
-        for (int i = 0; i < logCount; i++) {
-            String mood = sharedPreferences.getString("mood_" + i, null);
-            String reason = sharedPreferences.getString("reason_" + i, null);
-            String dateTime = sharedPreferences.getString("dateTime_" + i, null);
+        // Split the logs into individual entries
+        String[] logEntries = existingLogs.split("\n");
 
-            if (mood != null && reason != null && dateTime != null) {
-                moodLogs.add(new MoodLogEntry(mood, reason, dateTime));
-            } else {
-                Log.e("MoodLogActivity", "Error loading log for index: " + i);
+        for (String entry : logEntries) {
+            // Parse each entry
+            String[] parts = entry.split("\n");
+            if (parts.length >= 4) {
+                // Extract mood, desired mood, reason, and timestamp
+                String currentMood = parts[0].replace("Current Mood: ", "");
+                String desiredMood = parts[1].replace("Desired Mood: ", "");
+                String reason = parts[2].replace("Reason: ", "");
+                String timestamp = java.time.LocalDateTime.now().toString(); // You might want to save actual timestamp
+
+                moodLogs.add(new MoodLogEntry(currentMood, reason, timestamp));
             }
         }
 
-        Log.d("MoodLogActivity", "Loaded logs: " + moodLogs.size());
         return moodLogs;
     }
 

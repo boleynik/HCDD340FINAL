@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
 
+
+        NavigationHelper.setupBottomNavigation(this, bottomNavigation);
+
         // Initialize the custom Toolbar
         androidx.appcompat.widget.Toolbar topAppBar = findViewById(R.id.topAppBar);
         setSupportActionBar(topAppBar); // Set it as the app bar for this activity
