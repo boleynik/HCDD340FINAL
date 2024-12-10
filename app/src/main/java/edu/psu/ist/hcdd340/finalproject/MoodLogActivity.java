@@ -35,7 +35,7 @@ public class MoodLogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood_log);
 
-        moodRecyclerView = findViewById(R.id.moodRecyclerView);
+      //  moodRecyclerView = findViewById(R.id.moodRecyclerView);
         moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Load data from SharedPreferences
