@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 logCount++; // Increment mood log count
                 tvLogNumber.setText(logCount + " times! 🎉");
-                Toast.makeText(MainActivity.this, "Mood logged successfully!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Mood logged successfully!", Toast.LENGTH_SHORT).show();
             }
         });
     }
