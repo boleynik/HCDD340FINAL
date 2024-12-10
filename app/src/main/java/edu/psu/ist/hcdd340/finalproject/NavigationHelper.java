@@ -23,13 +23,16 @@ public class NavigationHelper {
                         }
                         return true;
                     case R.id.nav_moods:
+                        if (!(activity instanceof MoodActivity)) {
+                            Intent moodIntent = new Intent(activity, MoodActivity.class);
+                            activity.startActivity(moodIntent);
+                        }
+                        return true;
+                    case R.id.nav_profile:
                         if (!(activity instanceof MoodLogActivity)) {
                             Intent moodLogIntent = new Intent(activity, MoodLogActivity.class);
                             activity.startActivity(moodLogIntent);
                         }
-                        return true;
-                    case R.id.nav_profile:
-                        Toast.makeText(activity, "Profile clicked", Toast.LENGTH_SHORT).show();
                         return true;
                 }
                 return false;
