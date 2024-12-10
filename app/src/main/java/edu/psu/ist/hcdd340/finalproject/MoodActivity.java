@@ -124,7 +124,9 @@ public class MoodActivity extends AppCompatActivity {
         // Save log entry to SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MoodTrackerPrefs", MODE_PRIVATE);
         String existingLogs = sharedPreferences.getString("moodLogs", "");
-        sharedPreferences.edit().putString("moodLogs", existingLogs + summary + "\n").apply();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("moodLogs", existingLogs + summary + "\n\n");
+        editor.apply();
 
         showToast("Mood logged successfully!");
 
@@ -132,7 +134,7 @@ public class MoodActivity extends AppCompatActivity {
         showToast(summary);
 
         // Clear form fields
-        Intent intent = new Intent(MoodActivity.this, MoodLogActivity.class);
+        Intent intent = new Intent(MoodActivity.this, suggestionsActivity.class);
         startActivity(intent);
         extraInput.setText("");
     }

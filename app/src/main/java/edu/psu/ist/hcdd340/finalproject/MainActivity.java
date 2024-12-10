@@ -1,6 +1,7 @@
 package edu.psu.ist.hcdd340.finalproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         tvLogNumber = findViewById(R.id.tvLogNumber);
         Button btnLogMood = findViewById(R.id.btnLogMood);
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        NavigationHelper.setupBottomNavigation(this, bottomNavigation);
+
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
 
         // Initialize the custom Toolbar
