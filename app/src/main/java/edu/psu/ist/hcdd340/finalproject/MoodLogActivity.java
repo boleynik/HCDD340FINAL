@@ -1,10 +1,14 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,17 +40,47 @@ public class MoodLogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mood_log);
 
       //  moodRecyclerView = findViewById(R.id.moodRecyclerView);
-        moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+      //  moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Load data from SharedPreferences
         List<MoodLogEntry> moodLogEntries = loadMoodLogs();
 
         // Set up RecyclerView
-        moodLogAdapter = new MoodLogAdapter(moodLogEntries);
-        moodRecyclerView.setAdapter(moodLogAdapter);
+     //   moodLogAdapter = new MoodLogAdapter(moodLogEntries);
+      //  moodRecyclerView.setAdapter(moodLogAdapter);
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
+
+
+        try {
+            // Find views
+            TextView currentMood = findViewById(R.id.current_mood);
+            TextView desiredMood = findViewById(R.id.desired_mood);
+            TextView reason = findViewById(R.id.reason);
+            ImageView imageView2 = findViewById(R.id.imageView2);
+
+            if (currentMood == null || desiredMood == null || reason == null || imageView2 == null) {
+                throw new NullPointerException("One or more views not found in layout");
+            }
+
+            // Set click listeners
+            View.OnClickListener navigateToLogActivity = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MoodLogActivity.this, LogActivityActivity.class);
+                    startActivity(intent);
+                }
+            };
+
+            currentMood.setOnClickListener(navigateToLogActivity);
+            desiredMood.setOnClickListener(navigateToLogActivity);
+            reason.setOnClickListener(navigateToLogActivity);
+            imageView2.setOnClickListener(navigateToLogActivity);
+
+        } catch (Exception e) {
+            Log.e(TAG, "Error initializing MoodLogActivity: " + e.getMessage());
+        }
     }
 
     private List<MoodLogEntry> loadMoodLogs() {

@@ -49,7 +49,7 @@ public class LogActivityActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle the most used playlist button click
-                logDate.setText("December 1, 2024");
+                logDate.setText("December 12, 2024");
                 emotionStatus.setText("You were stressed: 😟");
                 desiredEmotion.setText("You wanted to be happy: 😃");
                 reasonForStress.setText("Reason for stress: Work 💼");
@@ -63,7 +63,7 @@ public class LogActivityActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle the genre button click
                 // Here you can update the activity with different genre-related data
-                logDate.setText("December 1, 2024");
+                logDate.setText("December 12, 2024");
                 emotionStatus.setText("You were stressed: 😟");
                 desiredEmotion.setText("You wanted to be happy: 😃");
                 reasonForStress.setText("Reason for stress: Work 💼");
@@ -76,7 +76,7 @@ public class LogActivityActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle the movie button click
-                logDate.setText("December 1, 2024");
+                logDate.setText("December 12, 2024");
                 emotionStatus.setText("You were stressed: 😟");
                 desiredEmotion.setText("You wanted to be happy: 😃");
                 reasonForStress.setText("Reason for stress: Work 💼");
@@ -89,7 +89,7 @@ public class LogActivityActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle the quote button click
-                logDate.setText("December 1, 2024");
+                logDate.setText("December 12, 2024");
                 emotionStatus.setText("You were stressed: 😟");
                 desiredEmotion.setText("You wanted to be happy: 😃");
                 reasonForStress.setText("Reason for stress: Work 💼");
@@ -102,7 +102,7 @@ public class LogActivityActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Handle the recipe button click
-                logDate.setText("December 1, 2024");
+                logDate.setText("December 12, 2024");
                 emotionStatus.setText("You were stressed: 😟");
                 desiredEmotion.setText("You wanted to be happy: 😃");
                 reasonForStress.setText("Reason for stress: Work 💼");
