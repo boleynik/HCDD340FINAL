@@ -9,19 +9,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.NestedScrollView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class LogActivityActivity extends AppCompatActivity {
 
     // Declare views
     private Toolbar topAppBar;
     private TextView logDate, emotionStatus, desiredEmotion, reasonForStress, timeLogged, interactions;
     private Button mostUsedPlaylist, genre, movie, quote, recipe;
-    private NestedScrollView scrollView;
 
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_log_activity);
 
         // Initialize views
         topAppBar = findViewById(R.id.topAppBar);
@@ -38,7 +39,8 @@ public class LogActivityActivity extends AppCompatActivity {
         quote = findViewById(R.id.quote);
         recipe = findViewById(R.id.recipe);
 
-        scrollView = findViewById(R.id.scrollView);
+        BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
+        NavigationHelper.setupBottomNavigation(this, bottomNavigation);
 
         // Set up toolbar title
         setSupportActionBar(topAppBar);
