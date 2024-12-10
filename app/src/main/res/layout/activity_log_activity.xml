@@ -9,15 +9,15 @@
     <!-- Top Menu Bar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topAppBar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#D1C4E9"
+        android:background="#EC8FE0"
         android:title="muud"
-        android:titleTextColor="#6A1B9A"
-        app:menu="@menu/top_app_bar_menu"
-        app:layout_constraintTop_toTopOf="parent"
+        android:titleTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar_menu" />
 
     <!-- Scrollable Content -->
     <ScrollView
