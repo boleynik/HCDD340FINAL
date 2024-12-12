@@ -1,4 +1,5 @@
 <resources>
+    //home and about strings
     <string name="app_name">muud</string>
     <string name="welcome">Welcome to muud!</string>
     <string name="tip_of_day_title">Mindful tip of the day:</string>
@@ -15,5 +16,15 @@
     <string name="anything_else">Anything else you'd like to share?</string>
     <string name="submit">Submit</string>
 
+    //activity suggestions strings
+    <string name="here_are_our_suggestions">Based on how you want to feel, here are our suggestions:</string>
+    <string name="music">Music</string>
+    <string name="movies">Movies</string>
+    <string name="Recipes">Recipes</string>
+    <string name="Fitness">Fitness</string>
+    <string name="meditation">Mindfulness/Meditation</string>
+    <string name="books">Books/Quotes</string>
+
+    //happy
 
 </resources>

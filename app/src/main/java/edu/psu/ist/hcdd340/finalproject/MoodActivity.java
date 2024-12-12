@@ -134,9 +134,12 @@ public class MoodActivity extends AppCompatActivity {
         showToast(summary);
 
         // Clear form fields
-        Intent intent = new Intent(MoodActivity.this, suggestionsActivity.class);
-        startActivity(intent);
         extraInput.setText("");
+
+        // Create an intent to navigate to suggestionsActivity and pass the selected mood
+        Intent intent = new Intent(MoodActivity.this, suggestionsActivity.class);
+        intent.putExtra("selectedMood", currentMood);  // Pass the currentMood to the next activity
+        startActivity(intent);
     }
 
     private void showToast(String message) {
