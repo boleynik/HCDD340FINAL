@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,15 +26,18 @@ public class MoodActivity extends AppCompatActivity {
     // Emoji TextViews
     private TextView emojiHappy, emojiSad, emojiAngry, emojiScared, emojiExcited, emojiBored, emojiLove;
     private TextView emojiHappyTwo, emojiSadTwo, emojiAngryTwo, emojiScaredTwo, emojiExcitedTwo, emojiBoredTwo, emojiLoveTwo;
-
+    private LinearLayout emojiLayout;
+    private TextView feelText;
     // Other views
     private Spinner reasonSpinner;
+    private Spinner moodActionSpinner;
     private EditText extraInput;
     private Button submitButton;
 
     // Selected emojis
     private String currentMood = "";
     private String desiredMood = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,30 @@ public class MoodActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
+
+        // Set spinner listener
+        moodActionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedAction = parent.getItemAtPosition(position).toString();
+                if (selectedAction.equals("Change it")) {
+                    emojiLayout.setVisibility(View.VISIBLE);
+                    feelText.setVisibility(View.VISIBLE);
+                } else {
+                    emojiLayout.setVisibility(View.GONE);
+                    feelText.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                emojiLayout.setVisibility(View.GONE);
+                feelText.setVisibility(View.GONE);
+            }
+
+        });
+
+
     }
 
     private void initializeViews() {
@@ -69,9 +98,14 @@ public class MoodActivity extends AppCompatActivity {
         emojiBoredTwo = findViewById(R.id.emoji_bored_two);
         emojiLoveTwo = findViewById(R.id.emoji_love_two);
 
+        emojiLayout = findViewById(R.id.emoji_Layout);
+        feelText = findViewById(R.id.feel_text);
+
         reasonSpinner = findViewById(R.id.reason_spinner);
         extraInput = findViewById(R.id.extra_input);
         submitButton = findViewById(R.id.submit_button);
+
+        moodActionSpinner = findViewById(R.id.mood_action_spinner);
     }
 
     private void setEmojiClickListeners() {

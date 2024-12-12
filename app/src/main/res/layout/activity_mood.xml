@@ -105,19 +105,38 @@
                 android:padding="8dp" />
         </LinearLayout>
 
-        <!-- How would you like to feel? -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How would you like to feel?"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp" />
-
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:text="Would you like to sit with this mood or change it?"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/mood_action_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/mood_action_array"
+                android:layout_marginBottom="16dp" />
+
+
+        <!-- How would you like to feel? -->
+                <TextView
+                    android:id="@+id/feel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How would you like to feel?"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/emoji_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                 <!-- Placeholder emojis -->
                 <TextView
