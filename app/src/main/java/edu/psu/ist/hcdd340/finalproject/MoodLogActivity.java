@@ -44,7 +44,9 @@ public class MoodLogActivity extends AppCompatActivity {
         List<MoodLogEntry> moodLogEntries = loadMoodLogs();
 
         // Set up RecyclerView
-        moodLogAdapter = new MoodLogAdapter(moodLogEntries);
+        moodRecyclerView = findViewById(R.id.moodRecyclerView);
+        moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        moodLogAdapter = new MoodLogAdapter(this, moodLogEntries);
         moodRecyclerView.setAdapter(moodLogAdapter);
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
