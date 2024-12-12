@@ -7,44 +7,47 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class MoodLogAdapter extends RecyclerView.Adapter<MoodLogAdapter.ViewHolder> {
+    public class MoodLogAdapter extends RecyclerView.Adapter<MoodLogAdapter.MoodLogViewHolder> {
 
-    private final List<MoodLogEntry> moodLogEntries;
+        private final List<MoodLogEntry> moodLogEntries;
 
-    public MoodLogAdapter(List<MoodLogEntry> moodLogEntries) {
-        this.moodLogEntries = moodLogEntries;
-    }
+        public MoodLogAdapter(List<MoodLogEntry> moodLogEntries) {
+            this.moodLogEntries = moodLogEntries;
+        }
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_mood_log, parent, false);
-        return new ViewHolder(view);
-    }
+        @NonNull
+        @Override
+        public MoodLogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mood_log, parent, false);
+            return new MoodLogViewHolder(view);
+        }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        MoodLogEntry entry = moodLogEntries.get(position);
-        holder.dateTimeTextView.setText(entry.getDateTime());
-        holder.moodTextView.setText(entry.getMood());
-        holder.reasonTextView.setText(entry.getReason());
-    }
+        @Override
+        public void onBindViewHolder(@NonNull MoodLogViewHolder holder, int position) {
+            MoodLogEntry entry = moodLogEntries.get(position);
+            holder.currentMoodTextView.setText("Current Mood: " + entry.getCurrentMood());
+            holder.desiredMoodTextView.setText("Desired Mood: " + entry.getDesiredMood());
+            holder.reasonTextView.setText("Reason: " + entry.getReason());
+        }
 
-    @Override
-    public int getItemCount() {
-        return moodLogEntries.size();
-    }
+        @Override
+        public int getItemCount() {
+            return moodLogEntries.size();
+        }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView dateTimeTextView, moodTextView, reasonTextView;
+        public static class MoodLogViewHolder extends RecyclerView.ViewHolder {
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            dateTimeTextView = itemView.findViewById(R.id.dateTimeTextView);
-            moodTextView = itemView.findViewById(R.id.moodTextView);
-            reasonTextView = itemView.findViewById(R.id.reasonTextView);
+            TextView currentMoodTextView;
+            TextView desiredMoodTextView;
+            TextView reasonTextView;
+
+            public MoodLogViewHolder(@NonNull View itemView) {
+                super(itemView);
+                currentMoodTextView = itemView.findViewById(R.id.currentMoodTextView);
+                desiredMoodTextView = itemView.findViewById(R.id.desiredMoodTextView);
+                reasonTextView = itemView.findViewById(R.id.reasonTextView);
+            }
         }
     }
-}
+
 

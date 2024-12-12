@@ -1,25 +1,25 @@
 package edu.psu.ist.hcdd340.finalproject;
-public class MoodLogEntry {
-    private final String mood;
-    private final String reason;
-    private final String dateTime;
 
-    public MoodLogEntry(String mood, String reason, String dateTime) {
-        this.mood = mood;
+public class MoodLogEntry {
+    private final String currentMood;
+    private final String desiredMood;
+    private final String reason;
+
+    public MoodLogEntry(String currentMood, String desiredMood, String reason) {
+        this.currentMood = currentMood;
+        this.desiredMood = desiredMood;
         this.reason = reason;
-        this.dateTime = dateTime;
     }
 
-    public String getMood() {
-        return mood;
+    public String getCurrentMood() {
+        return currentMood;
+    }
+
+    public String getDesiredMood() {
+        return desiredMood;
     }
 
     public String getReason() {
         return reason;
     }
-
-    public String getDateTime() {
-        return dateTime;
-    }
 }
-
