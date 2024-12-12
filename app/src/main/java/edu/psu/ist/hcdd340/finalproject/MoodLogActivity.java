@@ -29,8 +29,6 @@ import java.util.List;
 
 public class MoodLogActivity extends AppCompatActivity {
 
-    private LinearLayout moodLogContainer;
-
     private RecyclerView moodRecyclerView;
     private MoodLogAdapter moodLogAdapter;
 
@@ -39,48 +37,20 @@ public class MoodLogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood_log);
 
-      //  moodRecyclerView = findViewById(R.id.moodRecyclerView);
-      //  moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        moodRecyclerView = findViewById(R.id.moodRecyclerView);
+        moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Load data from SharedPreferences
         List<MoodLogEntry> moodLogEntries = loadMoodLogs();
 
         // Set up RecyclerView
-     //   moodLogAdapter = new MoodLogAdapter(moodLogEntries);
-      //  moodRecyclerView.setAdapter(moodLogAdapter);
+        moodRecyclerView = findViewById(R.id.moodRecyclerView);
+        moodRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        moodLogAdapter = new MoodLogAdapter(this, moodLogEntries);
+        moodRecyclerView.setAdapter(moodLogAdapter);
 
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
-
-
-        try {
-            // Find views
-            TextView currentMood = findViewById(R.id.current_mood);
-            TextView desiredMood = findViewById(R.id.desired_mood);
-            TextView reason = findViewById(R.id.reason);
-            ImageView imageView2 = findViewById(R.id.imageView2);
-
-            if (currentMood == null || desiredMood == null || reason == null || imageView2 == null) {
-                throw new NullPointerException("One or more views not found in layout");
-            }
-
-            // Set click listeners
-            View.OnClickListener navigateToLogActivity = new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MoodLogActivity.this, LogActivityActivity.class);
-                    startActivity(intent);
-                }
-            };
-
-            currentMood.setOnClickListener(navigateToLogActivity);
-            desiredMood.setOnClickListener(navigateToLogActivity);
-            reason.setOnClickListener(navigateToLogActivity);
-            imageView2.setOnClickListener(navigateToLogActivity);
-
-        } catch (Exception e) {
-            Log.e(TAG, "Error initializing MoodLogActivity: " + e.getMessage());
-        }
     }
 
     private List<MoodLogEntry> loadMoodLogs() {
@@ -91,23 +61,20 @@ public class MoodLogActivity extends AppCompatActivity {
         String existingLogs = sharedPreferences.getString("moodLogs", "");
 
         // Split the logs into individual entries
-        String[] logEntries = existingLogs.split("\n");
+        String[] logEntries = existingLogs.split("\n\n");
 
         for (String entry : logEntries) {
             // Parse each entry
             String[] parts = entry.split("\n");
-            if (parts.length >= 4) {
-                // Extract mood, desired mood, reason, and timestamp
+            if (parts.length >= 3) {
                 String currentMood = parts[0].replace("Current Mood: ", "");
                 String desiredMood = parts[1].replace("Desired Mood: ", "");
                 String reason = parts[2].replace("Reason: ", "");
-                String timestamp = java.time.LocalDateTime.now().toString(); // You might want to save actual timestamp
 
-                moodLogs.add(new MoodLogEntry(currentMood, reason, timestamp));
+                moodLogs.add(new MoodLogEntry(currentMood, desiredMood, reason));
             }
         }
 
         return moodLogs;
     }
-
 }
