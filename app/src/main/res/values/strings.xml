@@ -8,4 +8,12 @@
     <string name="about">About</string>
     <string name="about_text">This is our mood-tracking app that we made for our HCDD 340 final. \n \n Made with love by Ben, Elyse, and John. </string>
 
+    //activity mood strings
+    <string name="how_are_you_feeling">How are you feeling today?</string>
+    <string name="how_would_you_like_to_feel">How would you like to feel?</string>
+    <string name="why_do_you_think">Why do you think you feel this way?</string>
+    <string name="anything_else">Anything else you'd like to share?</string>
+    <string name="submit">Submit</string>
+
+
 </resources>
