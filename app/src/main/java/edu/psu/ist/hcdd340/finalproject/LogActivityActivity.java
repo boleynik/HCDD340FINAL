@@ -1,13 +1,11 @@
 package edu.psu.ist.hcdd340.finalproject;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.widget.NestedScrollView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

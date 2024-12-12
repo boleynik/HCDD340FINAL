@@ -3,7 +3,6 @@ package edu.psu.ist.hcdd340.finalproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
