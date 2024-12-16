@@ -8,4 +8,11 @@
         <item>Personal growth</item>
         <item>Other</item>
     </string-array>
+
+    <string-array name="mood_action_array">
+        <item>Keep mood</item>
+        <item>Change it</item>
+    </string-array>
+
+
 </resources>
