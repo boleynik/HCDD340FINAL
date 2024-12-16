@@ -16,6 +16,7 @@
         <string name="why_do_you_think">Why do you think you feel this way?</string>
         <string name="anything_else">Anything else you would like to share?</string>
         <string name="submit">Submit</string>
+        <string name="log_mood">Log your mood</string>
 
         <!-- activity suggestions strings -->
         <string name="here_are_our_suggestions">Based on how you want to feel, here are our suggestions:</string>

@@ -1,177 +1,207 @@
 package edu.psu.ist.hcdd340.finalproject;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class suggestionsActivity extends AppCompatActivity {
 
+    private TextView appTitle;
+    private TextView music1, music2;
+    private TextView movie1, movie2;
+    private TextView recipe1, recipe2;
+    private TextView fitness1, fitness2;
+    private TextView meditation1, meditation2;
+    private TextView book1, book2, quote;
+
+    private LinearLayout musicLayout, movieLayout, recipeLayout, fitnessLayout, meditationLayout, bookLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suggestions);
 
-        // Retrieve the selected mood from the intent
-        String selectedMood = getIntent().getStringExtra("selectedMood");
+        // Initialize Views
+        initializeViews();
 
-        // Update the content dynamically based on the mood
-        updateContentBasedOnMood(selectedMood);
+        // Retrieve the passed data from the Intent
+        Intent intent = getIntent();
+        String desiredMood = intent.getStringExtra("desiredMood");
+
+        // Set dynamic title based on the desired mood
+        appTitle.setText("Suggestions for " + desiredMood);
+
+        // Display suggestions based on the desired mood
+        setSuggestions(desiredMood);
     }
 
-    private void updateContentBasedOnMood(String mood) {
-        // Titles
-        TextView titleTextView = findViewById(R.id.app_title);
+    private void initializeViews() {
+        appTitle = findViewById(R.id.app_title);
 
-        // Music
-        TextView music1 = findViewById(R.id.music1);
-        TextView music2 = findViewById(R.id.music2);
+        // Music Section
+        musicLayout = findViewById(R.id.musicLayout);
+        music1 = findViewById(R.id.music1);
+        music2 = findViewById(R.id.music2);
 
-        // Movies
-        TextView movie1 = findViewById(R.id.movie1);
-        TextView movie2 = findViewById(R.id.movie2);
+        // Movies Section
+        movieLayout = findViewById(R.id.movieLayout);
+        movie1 = findViewById(R.id.movie1);
+        movie2 = findViewById(R.id.movie2);
 
-        // Recipes
-        TextView recipe1 = findViewById(R.id.recipe1);
-        TextView recipe2 = findViewById(R.id.recipe2);
+        // Recipes Section
+        recipeLayout = findViewById(R.id.recipeLayout);
+        recipe1 = findViewById(R.id.recipe1);
+        recipe2 = findViewById(R.id.recipe2);
 
-        // Workouts
-        TextView fitness1 = findViewById(R.id.fitness1);
-        TextView fitness2 = findViewById(R.id.fitness2);
+        // Fitness Section
+        fitnessLayout = findViewById(R.id.fitnessLayout);
+        fitness1 = findViewById(R.id.fitness1);
+        fitness2 = findViewById(R.id.fitness2);
 
-        // Meditations
-        TextView med1 = findViewById(R.id.med1);
-        TextView med2 = findViewById(R.id.med2);
+        // Meditation Section
+        meditationLayout = findViewById(R.id.meditationLayout);
+        meditation1 = findViewById(R.id.med1);
+        meditation2 = findViewById(R.id.med2);
 
-        // Books and Quotes
-        TextView book1 = findViewById(R.id.book1);
-        TextView book2 = findViewById(R.id.book2);
-        TextView quote = findViewById(R.id.quote);
+        // Books Section
+        bookLayout = findViewById(R.id.bookLayout);
+        book1 = findViewById(R.id.book1);
+        book2 = findViewById(R.id.book2);
+        quote = findViewById(R.id.quote);
+    }
 
-        // Update resources based on the mood
-        switch (mood) {
-            case "happy":
-                titleTextView.setText("Suggestions for Feeling Happy!");
-                music1.setText(R.string.happy1);
-                music2.setText(R.string.happy2);
-                movie1.setText(R.string.happy_movie1);
-                movie2.setText(R.string.happy_movie2);
-                recipe1.setText(R.string.happy_recipe1);
-                recipe2.setText(R.string.happy_recipe2);
-                fitness1.setText(R.string.happy_workout1);
-                fitness2.setText(R.string.happy_workout2);
-                med1.setText(R.string.happy_meditation1);
-                med2.setText(R.string.happy_meditation2);
-                book1.setText(R.string.happy_book1);
-                book2.setText(R.string.happy_book2);
-                quote.setText(R.string.happy_quote);
+    private void setSuggestions(String desiredMood) {
+        // Show different suggestions based on the desired mood
+        switch (desiredMood) {
+            case "😊":
+                // Happy Mood Suggestions
+                music1.setText(fromHtml(getString(R.string.happy1)));
+                music2.setText(fromHtml(getString(R.string.happy2)));
+                movie1.setText(fromHtml(getString(R.string.happy_movie1)));
+                movie2.setText(fromHtml(getString(R.string.happy_movie2)));
+                recipe1.setText(fromHtml(getString(R.string.happy_recipe1)));
+                recipe2.setText(fromHtml(getString(R.string.happy_recipe2)));
+                fitness1.setText(fromHtml(getString(R.string.happy_workout1)));
+                fitness2.setText(fromHtml(getString(R.string.happy_workout2)));
+                meditation1.setText(fromHtml(getString(R.string.happy_meditation1)));
+                meditation2.setText(fromHtml(getString(R.string.happy_meditation2)));
+                book1.setText(fromHtml(getString(R.string.happy_book1)));
+                book2.setText(fromHtml(getString(R.string.happy_book2)));
+                quote.setText(fromHtml(getString(R.string.happy_quote)));
                 break;
-
-            case "sad":
-                titleTextView.setText("Suggestions for Feeling Sad");
-                music1.setText(R.string.sad_song1);
-                music2.setText(R.string.sad_song2);
-                movie1.setText(R.string.sad_movie1);
-                movie2.setText(R.string.sad_movie2);
-                recipe1.setText(R.string.sad_recipe1);
-                recipe2.setText(R.string.sad_recipe2);
-                fitness1.setText(R.string.sad_workout1);
-                fitness2.setText(R.string.sad_workout2);
-                med1.setText(R.string.sad_meditation1);
-                med2.setText(R.string.sad_meditation2);
-                book1.setText(R.string.sad_book1);
-                book2.setText(R.string.sad_book2);
-                quote.setText(R.string.sad_quote);
+            case "😢":
+                // Sad Mood Suggestions
+                music1.setText(fromHtml(getString(R.string.sad_song1)));
+                music2.setText(fromHtml(getString(R.string.sad_song2)));
+                movie1.setText(fromHtml(getString(R.string.sad_movie1)));
+                movie2.setText(fromHtml(getString(R.string.sad_movie2)));
+                recipe1.setText(fromHtml(getString(R.string.sad_recipe1)));
+                recipe2.setText(fromHtml(getString(R.string.sad_recipe2)));
+                fitness1.setText(fromHtml(getString(R.string.sad_workout1)));
+                fitness2.setText(fromHtml(getString(R.string.sad_workout2)));
+                meditation1.setText(fromHtml(getString(R.string.sad_meditation1)));
+                meditation2.setText(fromHtml(getString(R.string.sad_meditation2)));
+                book1.setText(fromHtml(getString(R.string.sad_book1)));
+                book2.setText(fromHtml(getString(R.string.sad_book2)));
+                quote.setText(fromHtml(getString(R.string.sad_quote)));
                 break;
-
-            case "angry":
-                titleTextView.setText("Suggestions for Feeling Angry");
-                music1.setText(R.string.angry_song1);
-                music2.setText(R.string.angry_song2);
-                movie1.setText(R.string.angry_movie1);
-                movie2.setText(R.string.angry_movie2);
-                recipe1.setText(R.string.angry_recipe1);
-                recipe2.setText(R.string.angry_recipe2);
-                fitness1.setText(R.string.angry_workout1);
-                fitness2.setText(R.string.angry_workout2);
-                med1.setText(R.string.angry_meditation1);
-                med2.setText(R.string.angry_meditation2);
-                book1.setText(R.string.angry_book1);
-                book2.setText(R.string.angry_book2);
-                quote.setText(R.string.angry_quote);
+            case "😡":
+                // Angry Mood Suggestions
+                music1.setText(fromHtml(getString(R.string.angry_song1)));
+                music2.setText(fromHtml(getString(R.string.angry_song2)));
+                movie1.setText(fromHtml(getString(R.string.angry_movie1)));
+                movie2.setText(fromHtml(getString(R.string.angry_movie2)));
+                recipe1.setText(fromHtml(getString(R.string.angry_recipe1)));
+                recipe2.setText(fromHtml(getString(R.string.angry_recipe2)));
+                fitness1.setText(fromHtml(getString(R.string.angry_workout1)));
+                fitness2.setText(fromHtml(getString(R.string.angry_workout2)));
+                meditation1.setText(fromHtml(getString(R.string.angry_meditation1)));
+                meditation2.setText(fromHtml(getString(R.string.angry_meditation2)));
+                book1.setText(fromHtml(getString(R.string.angry_book1)));
+                book2.setText(fromHtml(getString(R.string.angry_book2)));
+                quote.setText(fromHtml(getString(R.string.angry_quote)));
                 break;
-
-            case "stressed":
-                titleTextView.setText("Suggestions for Feeling Stressed");
-                music1.setText(R.string.stressed_song1);
-                music2.setText(R.string.stressed_song2);
-                movie1.setText(R.string.stressed_movie1);
-                movie2.setText(R.string.stressed_movie2);
-                recipe1.setText(R.string.stressed_recipe1);
-                recipe2.setText(R.string.stressed_recipe2);
-                fitness1.setText(R.string.stressed_workout1);
-                fitness2.setText(R.string.stressed_workout2);
-                med1.setText(R.string.stressed_meditation1);
-                med2.setText(R.string.stressed_meditation2);
-                book1.setText(R.string.stressed_book1);
-                book2.setText(R.string.stressed_book2);
-                quote.setText(R.string.stressed_quote);
+            case "😆":
+                // Excited Mood Suggestions
+                music1.setText(fromHtml(getString(R.string.excited_song1)));
+                music2.setText(fromHtml(getString(R.string.excited_song2)));
+                movie1.setText(fromHtml(getString(R.string.excited_movie1)));
+                movie2.setText(fromHtml(getString(R.string.excited_movie2)));
+                recipe1.setText(fromHtml(getString(R.string.excited_recipe1)));
+                recipe2.setText(fromHtml(getString(R.string.excited_recipe2)));
+                fitness1.setText(fromHtml(getString(R.string.excited_workout1)));
+                fitness2.setText(fromHtml(getString(R.string.excited_workout2)));
+                meditation1.setText(fromHtml(getString(R.string.excited_meditation1)));
+                meditation2.setText(fromHtml(getString(R.string.excited_meditation2)));
+                book1.setText(fromHtml(getString(R.string.excited_book1)));
+                book2.setText(fromHtml(getString(R.string.excited_book2)));
+                quote.setText(fromHtml(getString(R.string.excited_quote)));
                 break;
-
-            case "excited":
-                titleTextView.setText("Suggestions for Feeling Excited");
-                music1.setText(R.string.excited_song1);
-                music2.setText(R.string.excited_song2);
-                movie1.setText(R.string.excited_movie1);
-                movie2.setText(R.string.excited_movie2);
-                recipe1.setText(R.string.excited_recipe1);
-                recipe2.setText(R.string.excited_recipe2);
-                fitness1.setText(R.string.excited_workout1);
-                fitness2.setText(R.string.excited_workout2);
-                med1.setText(R.string.excited_meditation1);
-                med2.setText(R.string.excited_meditation2);
-                book1.setText(R.string.excited_book1);
-                book2.setText(R.string.excited_book2);
-                quote.setText(R.string.excited_quote);
+            case "😑":
+                // Bored Mood Suggestions
+                music1.setText(fromHtml(getString(R.string.bored_song1)));
+                music2.setText(fromHtml(getString(R.string.bored_song2)));
+                movie1.setText(fromHtml(getString(R.string.bored_movie1)));
+                movie2.setText(fromHtml(getString(R.string.bored_movie2)));
+                recipe1.setText(fromHtml(getString(R.string.bored_recipe1)));
+                recipe2.setText(fromHtml(getString(R.string.bored_recipe2)));
+                fitness1.setText(fromHtml(getString(R.string.bored_workout1)));
+                fitness2.setText(fromHtml(getString(R.string.bored_workout2)));
+                meditation1.setText(fromHtml(getString(R.string.bored_meditation1)));
+                meditation2.setText(fromHtml(getString(R.string.bored_meditation2)));
+                book1.setText(fromHtml(getString(R.string.bored_book1)));
+                book2.setText(fromHtml(getString(R.string.bored_book2)));
+                quote.setText(fromHtml(getString(R.string.bored_quote)));
                 break;
-
-            case "bored":
-                titleTextView.setText("Suggestions for Feeling Bored");
-                music1.setText(R.string.bored_song1);
-                music2.setText(R.string.bored_song2);
-                movie1.setText(R.string.bored_movie1);
-                movie2.setText(R.string.bored_movie2);
-                recipe1.setText(R.string.bored_recipe1);
-                recipe2.setText(R.string.bored_recipe2);
-                fitness1.setText(R.string.bored_workout1);
-                fitness2.setText(R.string.bored_workout2);
-                med1.setText(R.string.bored_meditation1);
-                med2.setText(R.string.bored_meditation2);
-                book1.setText(R.string.bored_book1);
-                book2.setText(R.string.bored_book2);
-                quote.setText(R.string.bored_quote);
+            case "😍":
+                // In Love Mood Suggestions
+                music1.setText(fromHtml(getString(R.string.inlove_song1)));
+                music2.setText(fromHtml(getString(R.string.inlove_song2)));
+                movie1.setText(fromHtml(getString(R.string.inlove_movie1)));
+                movie2.setText(fromHtml(getString(R.string.inlove_movie2)));
+                recipe1.setText(fromHtml(getString(R.string.inlove_recipe1)));
+                recipe2.setText(fromHtml(getString(R.string.inlove_recipe2)));
+                fitness1.setText(fromHtml(getString(R.string.inlove_workout1)));
+                fitness2.setText(fromHtml(getString(R.string.inlove_workout2)));
+                meditation1.setText(fromHtml(getString(R.string.inlove_meditation1)));
+                meditation2.setText(fromHtml(getString(R.string.inlove_meditation2)));
+                book1.setText(fromHtml(getString(R.string.inlove_book1)));
+                book2.setText(fromHtml(getString(R.string.inlove_book2)));
+                quote.setText(fromHtml(getString(R.string.inlove_quote1)));
                 break;
+        }
 
-            case "love":
-                titleTextView.setText("Suggestions for Feeling In Love");
-                music1.setText(R.string.inlove_song1);
-                music2.setText(R.string.inlove_song2);
-                movie1.setText(R.string.inlove_movie1);
-                movie2.setText(R.string.inlove_movie2);
-                recipe1.setText(R.string.inlove_recipe1);
-                recipe2.setText(R.string.inlove_recipe2);
-                fitness1.setText(R.string.inlove_workout1);
-                fitness2.setText(R.string.inlove_workout2);
-                med1.setText(R.string.inlove_meditation1);
-                med2.setText(R.string.inlove_meditation2);
-                book1.setText(R.string.inlove_book1);
-                book2.setText(R.string.inlove_book2);
-                quote.setText(R.string.inlove_quote1);
-                break;
+        // Enable clickable links for all TextViews
+        enableLinkMovement();
+    }
 
-            default:
-                titleTextView.setText("Suggestions for You");
-                break;
+    private void enableLinkMovement() {
+        music1.setMovementMethod(LinkMovementMethod.getInstance());
+        music2.setMovementMethod(LinkMovementMethod.getInstance());
+        movie1.setMovementMethod(LinkMovementMethod.getInstance());
+        movie2.setMovementMethod(LinkMovementMethod.getInstance());
+        recipe1.setMovementMethod(LinkMovementMethod.getInstance());
+        recipe2.setMovementMethod(LinkMovementMethod.getInstance());
+        fitness1.setMovementMethod(LinkMovementMethod.getInstance());
+        fitness2.setMovementMethod(LinkMovementMethod.getInstance());
+        meditation1.setMovementMethod(LinkMovementMethod.getInstance());
+        meditation2.setMovementMethod(LinkMovementMethod.getInstance());
+        book1.setMovementMethod(LinkMovementMethod.getInstance());
+        book2.setMovementMethod(LinkMovementMethod.getInstance());
+        quote.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    private CharSequence fromHtml(String htmlString) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            return Html.fromHtml(htmlString, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            return Html.fromHtml(htmlString);
         }
     }
 }
