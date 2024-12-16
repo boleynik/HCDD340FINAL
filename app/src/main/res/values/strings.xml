@@ -1,407 +1,408 @@
 <resources>
-    //home and about strings
-    <string name="app_name">muud</string>
-    <string name="welcome">Welcome to muud!</string>
-    <string name="tip_of_day_title">Mindful tip of the day:</string>
-    <string name="tip_of_day_actual">Hydration can affect your mood: Make sure to drink enough water!</string>
-    <string name="ready_text">Ready to log your mood?</string>
-    <string name="lets_go_button_text">Let\'s go!</string>
-    <string name="about">About</string>
-    <string name="about_text">This is our mood-tracking app that we made for our HCDD 340 final. \n \n Made with love by Ben, Elyse, and John. </string>
 
-    //activity mood strings
-    <string name="how_are_you_feeling">How are you feeling today?</string>
-    <string name="how_would_you_like_to_feel">How would you like to feel?</string>
-    <string name="why_do_you_think">Why do you think you feel this way?</string>
-    <string name="anything_else">Anything else you'd like to share?</string>
-    <string name="submit">Submit</string>
+        <!-- home and about strings -->
+        <string name="app_name">muud</string>
+        <string name="welcome">Welcome to muud!</string>
+        <string name="tip_of_day_title">Mindful tip of the day:</string>
+        <string name="tip_of_day_actual">Hydration can affect your mood: Make sure to drink enough water!</string>
+        <string name="ready_text">Ready to log your mood?</string>
+        <string name="lets_go_button_text">Go!</string>
+        <string name="about">About</string>
+        <string name="about_text">This is our mood-tracking app that we made for our HCDD 340 final.&#10;&#10;Made with love by Ben, Elyse, and John.</string>
 
-    //activity suggestions strings
-    <string name="here_are_our_suggestions">Based on how you want to feel, here are our suggestions:</string>
-    <string name="music">Music</string>
-    <string name="movies">Movies</string>
-    <string name="Recipes">Recipes</string>
-    <string name="Fitness">Fitness</string>
-    <string name="meditation">Mindfulness/Meditation</string>
-    <string name="books">Books/Quotes</string>
+        <!-- activity mood strings -->
+        <string name="how_are_you_feeling">How are you feeling today?</string>
+        <string name="how_would_you_like_to_feel">How would you like to feel?</string>
+        <string name="why_do_you_think">Why do you think you feel this way?</string>
+        <string name="anything_else">Anything else you would like to share?</string>
+        <string name="submit">Submit</string>
 
-    //happy
-    <string name="happy1">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Never Gonna Give You Up by Rick Astley</a>
-</string>
-    <string name="happy2">
-    <a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ">Happy by Pharrell Williams</a>
-</string>
+        <!-- activity suggestions strings -->
+        <string name="here_are_our_suggestions">Based on how you want to feel, here are our suggestions:</string>
+        <string name="music">Music</string>
+        <string name="movies">Movies</string>
+        <string name="Recipes">Recipes</string>
+        <string name="Fitness">Fitness</string>
+        <string name="meditation">Mindfulness/Meditation</string>
+        <string name="books">Books/Quotes</string>
 
-    <string name="happy_movie1">
-    <a href="https://www.imdb.com/title/tt0114709/">The Pursuit of Happyness by Gabriele Muccino</a>
-</string>
 
-    <string name="happy_movie2">
-    <a href="https://www.imdb.com/title/tt0107048/">Forrest Gump by Robert Zemeckis</a>
-</string>
-
-    <string name="happy_recipe1">
-    <a href="https://www.allrecipes.com/recipe/21253/chocolate-chip-cookies-iii/">Chocolate Chip Cookies by AllRecipes</a>
-</string>
-
-    <string name="happy_recipe2">
-    <a href="https://www.allrecipes.com/recipe/27183/creamy-chicken-and-broccoli-pasta/">Creamy Chicken and Broccoli Pasta by AllRecipes</a>
-</string>
-
-    <string name="happy_workout1">
-    <a href="https://www.youtube.com/watch?v=dQqApV3i7Lk">Happy Cardio Dance Workout by FitnessBlender</a>
-</string>
-
-    <string name="happy_workout2">
-    <a href="https://www.youtube.com/watch?v=G6PAkhk5i38">Positive Energy Full Body Workout by POPSUGAR Fitness</a>
-</string>
-
-    <string name="happy_meditation1">
-    <a href="https://www.youtube.com/watch?v=ZToicYcHIOU">Morning Meditation for Happiness by Great Meditation</a>
-</string>
+        <!-- happy -->
+        <string name="happy1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Never Gonna Give You Up by Rick Astley</a>]]>
+    </string>
+        <string name="happy2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ">Happy by Pharrell Williams</a>]]>
+    </string>
 
-    <string name="happy_meditation2">
-    <a href="https://www.youtube.com/watch?v=G5kZt1JxidI">Positive Vibes Meditation for Joy by Meditation Vacation</a>
-</string>
+        <string name="happy_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0114709/">The Pursuit of Happyness by Gabriele Muccino</a>]]>
+    </string>
 
-    <string name="happy_book1">
-    <a href="https://www.imdb.com/title/tt4874984/">The Happiness Project by Gretchen Rubin</a>
-</string>
+        <string name="happy_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0107048/">Forrest Gump by Robert Zemeckis</a>]]>
+    </string>
 
-    <string name="happy_book2">
-    <a href="https://www.imdb.com/title/tt1628033/">The Book of Joy by Dalai Lama and Desmond Tutu</a>
-</string>
+        <string name="happy_recipe1">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/21253/chocolate-chip-cookies-iii/">Chocolate Chip Cookies by AllRecipes</a>]]>
+    </string>
 
-    <string name="happy_quote">
-    <a href="https://www.goodreads.com/quotes/1137-happiness-is-not-something-ready-made-it-comes-from-your">Happiness is not something ready-made. It comes from your own actions. – Dalai Lama</a>
-</string>
+        <string name="happy_recipe2">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/27183/creamy-chicken-and-broccoli-pasta/">Creamy Chicken and Broccoli Pasta by AllRecipes</a>]]>
+    </string>
 
-    <!-- sad -->
+        <string name="happy_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=dQqApV3i7Lk">Happy Cardio Dance Workout by FitnessBlender</a>]]>
+    </string>
 
-    <string name="sad_song1">
-        <a href="https://www.youtube.com/watch?v=4fndeDfaWCg">Tears in Heaven by Eric Clapton</a>
+        <string name="happy_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=G6PAkhk5i38">Positive Energy Full Body Workout by POPSUGAR Fitness</a>]]>
     </string>
 
-    <string name="sad_song2">
-        <a href="https://www.youtube.com/watch?v=fg5RU5pIskI">Someone Like You by Adele</a>
+        <string name="happy_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=ZToicYcHIOU">Morning Meditation for Happiness by Great Meditation</a>]]>
     </string>
 
-    <string name="sad_movie1">
-        <a href="https://www.imdb.com/title/tt0108002/">Schindler's List</a>
+        <string name="happy_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=G5kZt1JxidI">Positive Vibes Meditation for Joy by Meditation Vacation</a>]]>
     </string>
 
-    <string name="sad_movie2">
-        <a href="https://www.imdb.com/title/tt1538403/">The Fault in Our Stars</a>
+        <string name="happy_book1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt4874984/">The Happiness Project by Gretchen Rubin</a>]]>
     </string>
 
-    <string name="sad_recipe1">
-        <a href="https://www.allrecipes.com/recipe/235548/sad-soups-pasta-soup/">Sad Soup Pasta</a>
+        <string name="happy_book2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt1628033/">The Book of Joy by Dalai Lama and Desmond Tutu</a>]]>
     </string>
 
-    <string name="sad_recipe2">
-        <a href="https://www.allrecipes.com/recipe/11084/sad-day-chocolate-cake/">Sad Day Chocolate Cake</a>
+        <string name="happy_quote">
+        <![CDATA[<a href="https://www.goodreads.com/quotes/1137-happiness-is-not-something-ready-made-it-comes-from-your">Happiness is not something ready-made. It comes from your own actions. – Dalai Lama</a>]]>
     </string>
+
+        <!-- sad -->
 
-    <string name="sad_workout1">
-        <a href="https://www.youtube.com/watch?v=brpZT-GGFYk">Sad Yoga for Healing</a>
+        <string name="sad_song1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=4fndeDfaWCg">Tears in Heaven by Eric Clapton</a>]]>
     </string>
 
-    <string name="sad_workout2">
-        <a href="https://www.youtube.com/watch?v=pGVyOkubvUk">Slow, Reflective Stretching</a>
+        <string name="sad_song2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=fg5RU5pIskI">Someone Like You by Adele</a>]]>
     </string>
 
-    <string name="sad_meditation1">
-        <a href="https://www.youtube.com/watch?v=3eMllyTfrkA">Sadness Meditation for Healing</a>
+        <string name="sad_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0108002/">Schindlers List</a>]]>
     </string>
 
-    <string name="sad_meditation2">
-        <a href="https://www.youtube.com/watch?v=E9GnJ2yd3R4">Meditation for Letting Go of Pain</a>
+        <string name="sad_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt1538403/">The Fault in Our Stars</a>]]>
     </string>
 
-    <string name="sad_book1">
-        <a href="https://www.amazon.com/Grief-Observed-C-S-Lewis/dp/0060652381">A Grief Observed by C.S. Lewis</a>
+        <string name="sad_recipe1">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/235548/sad-soups-pasta-soup/">Sad Soup Pasta</a>]]>
     </string>
 
-    <string name="sad_book2">
-        <a href="https://www.amazon.com/To-Kill-Mockingbird-Harper-Lee/dp/0061120081">To Kill a Mockingbird by Harper Lee</a>
+        <string name="sad_recipe2">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/11084/sad-day-chocolate-cake/">Sad Day Chocolate Cake</a>]]>
     </string>
 
-    <string name="sad_quote">
-        <a href="https://www.goodreads.com/quotes/7462-grief-is-love-with-no-place-to-go">Grief is love with no place to go. – Jamie Anderson</a>
+        <string name="sad_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=brpZT-GGFYk">Sad Yoga for Healing</a>]]>
     </string>
 
-    <!-- angry -->
+        <string name="sad_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=pGVyOkubvUk">Slow, Reflective Stretching</a>]]>
+    </string>
 
-    <string name="angry_song1">
-        <a href="https://www.youtube.com/watch?v=XY_9SH0Gf60">Break Stuff by Limp Bizkit</a>
+        <string name="sad_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=3eMllyTfrkA">Sadness Meditation for Healing</a>]]>
     </string>
 
-    <string name="angry_song2">
-        <a href="https://www.youtube.com/watch?v=1mUlnDcmg6M">Killing in the Name by Rage Against the Machine</a>
+        <string name="sad_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=E9GnJ2yd3R4">Meditation for Letting Go of Pain</a>]]>
     </string>
 
-    <string name="angry_movie1">
-        <a href="https://www.imdb.com/title/tt0110912/">Fight Club</a>
+        <string name="sad_book1">
+        <![CDATA[<a href="https://www.amazon.com/Grief-Observed-C-S-Lewis/dp/0060652381">A Grief Observed by C.S. Lewis</a>]]>
     </string>
 
-    <string name="angry_movie2">
-        <a href="https://www.imdb.com/title/tt0482571/">The Dark Knight</a>
+        <string name="sad_book2">
+        <![CDATA[<a href="https://www.amazon.com/To-Kill-Mockingbird-Harper-Lee/dp/0061120081">To Kill a Mockingbird by Harper Lee</a>]]>
     </string>
 
-    <string name="angry_recipe1">
-        <a href="https://www.allrecipes.com/recipe/228319/angry-chicken/">Angry Chicken</a>
+        <string name="sad_quote">
+        <![CDATA[<a href="https://www.goodreads.com/quotes/7462-grief-is-love-with-no-place-to-go">Grief is love with no place to go. – Jamie Anderson</a>]]>
     </string>
 
-    <string name="angry_recipe2">
-        <a href="https://www.allrecipes.com/recipe/26135/spicy-angry-chili/">Spicy Angry Chili</a>
+        <!-- angry -->
+        <string name="angry_song1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=XY_9SH0Gf60">Break Stuff by Limp Bizkit</a>]]>
     </string>
 
-    <string name="angry_workout1">
-        <a href="https://www.youtube.com/watch?v=hJvcQFdjG9o">Angry HIIT Workout</a>
+        <string name="angry_song2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=1mUlnDcmg6M">Killing in the Name by Rage Against the Machine</a>]]>
     </string>
 
-    <string name="angry_workout2">
-        <a href="https://www.youtube.com/watch?v=mf8l-ARUCGs">Boxing Workout for Stress Relief</a>
+        <string name="angry_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0110912/">Fight Club</a>]]>
     </string>
 
-    <string name="angry_meditation1">
-        <a href="https://www.youtube.com/watch?v=eytkKVGyy9A">Anger Release Meditation</a>
+        <string name="angry_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0482571/">The Dark Knight</a>]]>
     </string>
 
-    <string name="angry_meditation2">
-        <a href="https://www.youtube.com/watch?v=pgI8G5nZZJ4">Guided Meditation for Anger Management</a>
+        <string name="angry_recipe1">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/228319/angry-chicken/">Angry Chicken</a>]]>
     </string>
 
-    <string name="angry_book1">
-        <a href="https://www.amazon.com/Anger-Control-Understanding-Overcoming-Personality/dp/0802716257">Anger: Wisdom for Cooling the Flames by Thich Nhat Hanh</a>
+        <string name="angry_recipe2">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/26135/spicy-angry-chili/">Spicy Angry Chili</a>]]>
     </string>
 
-    <string name="angry_book2">
-        <a href="https://www.amazon.com/Crucible-Arthur-Miller/dp/0142437336">The Crucible by Arthur Miller</a>
+        <string name="angry_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=hJvcQFdjG9o">Angry HIIT Workout</a>]]>
     </string>
 
-    <string name="angry_quote">
-        <a href="https://www.goodreads.com/quotes/13694-you-will-find-that-it-is-necessary-to-let-things-go">You will find that it is necessary to let things go; simply for the reason that they are heavy. – C. JoyBell C.</a>
+        <string name="angry_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=mf8l-ARUCGs">Boxing Workout for Stress Relief</a>]]>
     </string>
 
-    <!-- stressed -->
+        <string name="angry_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=eytkKVGyy9A">Anger Release Meditation</a>]]>
+    </string>
 
-    <string name="stressed_song1">
-        <a href="https://www.youtube.com/watch?v=J2Hhdn9M57k">Breathe Me by Sia</a>
+        <string name="angry_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=pgI8G5nZZJ4">Guided Meditation for Anger Management</a>]]>
     </string>
 
-    <string name="stressed_song2">
-        <a href="https://www.youtube.com/watch?v=w4Wf3LJl_l0">Weightless by Marconi Union</a>
+        <string name="angry_book1">
+        <![CDATA[<a href="https://www.amazon.com/Anger-Control-Understanding-Overcoming-Personality/dp/0802716257">Anger: Wisdom for Cooling the Flames by Thich Nhat Hanh</a>]]>
     </string>
 
-    <string name="stressed_movie1">
-        <a href="https://www.imdb.com/title/tt0108778/">A Beautiful Mind</a>
+        <string name="angry_book2">
+        <![CDATA[<a href="https://www.amazon.com/Crucible-Arthur-Miller/dp/0142437336">The Crucible by Arthur Miller</a>]]>
     </string>
 
-    <string name="stressed_movie2">
-        <a href="https://www.imdb.com/title/tt0133093/">The Matrix</a>
+        <string name="angry_quote">
+        <![CDATA[<a href="https://www.goodreads.com/quotes/13694-you-will-find-that-it-is-necessary-to-let-things-go">You will find that it is necessary to let things go; simply for the reason that they are heavy. – C. JoyBell C.</a>]]>
     </string>
 
-    <string name="stressed_recipe1">
-        <a href="https://www.allrecipes.com/recipe/229156/easy-vegetarian-stress-relieving-soup/">Easy Vegetarian Stress-Relieving Soup</a>
+        <!-- stressed -->
+        <string name="stressed_song1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=J2Hhdn9M57k">Breathe Me by Sia</a>]]>
     </string>
 
-    <string name="stressed_recipe2">
-        <a href="https://www.allrecipes.com/recipe/228319/creamy-chicken-and-mushroom-soup-for-stress-relief/">Creamy Chicken and Mushroom Soup for Stress Relief</a>
+        <string name="stressed_song2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=w4Wf3LJl_l0">Weightless by Marconi Union</a>]]>
     </string>
 
-    <string name="stressed_workout1">
-        <a href="https://www.youtube.com/watch?v=kTbyd9d_sLk">Gentle Yoga for Stress Relief</a>
+        <string name="stressed_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0108778/">A Beautiful Mind</a>]]>
     </string>
 
-    <string name="stressed_workout2">
-        <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI">Stress-Free Cardio Dance Workout</a>
+        <string name="stressed_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0133093/">The Matrix</a>]]>
     </string>
 
-    <string name="stressed_meditation1">
-        <a href="https://www.youtube.com/watch?v=2V_I1hV9-Xs">Guided Meditation for Deep Relaxation</a>
+        <string name="stressed_recipe1">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/229156/easy-vegetarian-stress-relieving-soup/">Easy Vegetarian Stress-Relieving Soup</a>]]>
     </string>
 
-    <string name="stressed_meditation2">
-        <a href="https://www.youtube.com/watch?v=1vx8iUvfyCY">10-Minute Meditation for Stress Relief</a>
+        <string name="stressed_recipe2">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/228319/creamy-chicken-and-mushroom-soup-for-stress-relief/">Creamy Chicken and Mushroom Soup for Stress Relief</a>]]>
     </string>
 
-    <string name="stressed_book1">
-        <a href="https://www.amazon.com/The-Stress-Management-Workbook-Techniques/dp/1641522277">The Stress Management Workbook by Ruth C. White</a>
+        <string name="stressed_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=kTbyd9d_sLk">Gentle Yoga for Stress Relief</a>]]>
     </string>
 
-    <string name="stressed_book2">
-        <a href="https://www.amazon.com/The-Simple-Guide-Stress-Relief/dp/1538272102">The Simple Guide to Stress Relief by Gillian H. Walker</a>
+        <string name="stressed_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=ml6cT4AZdqI">Stress-Free Cardio Dance Workout</a>]]>
     </string>
 
-    <string name="stressed_quote">
-        <a href="https://www.goodreads.com/quotes/5240-stress-does-not-kill-us-it-is-our-reaction">Stress does not kill us; it is our reaction to it. – Hans Selye</a>
+        <string name="stressed_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=2V_I1hV9-Xs">Guided Meditation for Deep Relaxation</a>]]>
     </string>
 
-    <!-- excited -->
+        <string name="stressed_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=1vx8iUvfyCY">10-Minute Meditation for Stress Relief</a>]]>
+    </string>
 
-    <string name="excited_song1">
-        <a href="https://www.youtube.com/watch?v=60ItHLz5WEA">Wake Me Up by Avicii</a>
+        <string name="stressed_book1">
+        <![CDATA[<a href="https://www.amazon.com/The-Stress-Management-Workbook-Techniques/dp/1641522277">The Stress Management Workbook by Ruth C. White</a>]]>
     </string>
 
-    <string name="excited_song2">
-        <a href="https://www.youtube.com/watch?v=9bZkp7q19f0">Gangnam Style by PSY</a>
+        <string name="stressed_book2">
+        <![CDATA[<a href="https://www.amazon.com/The-Simple-Guide-Stress-Relief/dp/1538272102">The Simple Guide to Stress Relief by Gillian H. Walker</a>]]>
     </string>
 
-    <string name="excited_movie1">
-        <a href="https://www.imdb.com/title/tt0816692/">Interstellar</a>
+        <string name="stressed_quote">
+        <![CDATA[<a href="https://www.goodreads.com/quotes/5240-stress-does-not-kill-us-it-is-our-reaction">Stress does not kill us; it is our reaction to it. – Hans Selye</a>]]>
     </string>
+        <!-- excited -->
+        <string name="excited_song1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=60ItHLz5WEA">Wake Me Up by Avicii</a>]]>
+    </string>
 
-    <string name="excited_movie2">
-        <a href="https://www.imdb.com/title/tt0435761/">Toy Story 3</a>
+        <string name="excited_song2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=9bZkp7q19f0">Gangnam Style by PSY</a>]]>
     </string>
 
-    <string name="excited_recipe1">
-        <a href="https://www.allrecipes.com/recipe/220854/mini-dessert-cheesecake-cups/">Mini Cheesecake Cups</a>
+        <string name="excited_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0816692/">Interstellar</a>]]>
     </string>
 
-    <string name="excited_recipe2">
-        <a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/">World's Best Lasagna</a>
+        <string name="excited_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0435761/">Toy Story 3</a>]]>
     </string>
 
-    <string name="excited_workout1">
-        <a href="https://www.youtube.com/watch?v=dMZvIcshsIM">High-Energy Dance Cardio</a>
+        <string name="excited_recipe1">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/220854/mini-dessert-cheesecake-cups/">Mini Cheesecake Cups</a>]]>
     </string>
 
-    <string name="excited_workout2">
-        <a href="https://www.youtube.com/watch?v=s3F6R92s6_o">HIIT Workout for an Energy Boost</a>
+        <string name="excited_recipe2">
+        <![CDATA[<a href="https://www.allrecipes.com/recipe/23600/worlds-best-lasagna/">The Best Lasagna in the World</a>]]>
     </string>
 
-    <string name="excited_meditation1">
-        <a href="https://www.youtube.com/watch?v=HH9EqGgJ13c">Visualization Meditation for Goals</a>
+        <string name="excited_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=dMZvIcshsIM">High-Energy Dance Cardio</a>]]>
     </string>
 
-    <string name="excited_meditation2">
-        <a href="https://www.youtube.com/watch?v=Rz2EBoMmS3Q">Motivation and Excitement Meditation</a>
+        <string name="excited_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=s3F6R92s6_o">HIIT Workout for an Energy Boost</a>]]>
     </string>
 
-    <string name="excited_book1">
-        <a href="https://www.amazon.com/The-Power-of-Moments/dp/1501147765">The Power of Moments by Chip and Dan Heath</a>
+        <string name="excited_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=HH9EqGgJ13c">Visualization Meditation for Goals</a>]]>
     </string>
 
-    <string name="excited_book2">
-        <a href="https://www.amazon.com/The-Art-of-Possibility/dp/0142001104">The Art of Possibility by Rosamund Stone Zander and Benjamin Zander</a>
+        <string name="excited_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=Rz2EBoMmS3Q">Motivation and Excitement Meditation</a>]]>
     </string>
 
-    <string name="excited_quote">
-        <a href="https://www.goodreads.com/quotes/157464-live-your-life-with-passion">Live your life with passion, excitement, and energy. – Tony Robbins</a>
+        <string name="excited_book1">
+        <![CDATA[<a href="https://www.amazon.com/The-Power-of-Moments/dp/1501147765">The Power of Moments by Chip and Dan Heath</a>]]>
     </string>
 
-    <!-- bored -->
+        <string name="excited_book2">
+        <![CDATA[<a href="https://www.amazon.com/The-Art-of-Possibility/dp/0142001104">The Art of Possibility by Rosamund Stone Zander and Benjamin Zander</a>]]>
+    </string>
 
-    <!-- Songs -->
-    <string name="bored_song1">
-        <a href="https://www.youtube.com/watch?v=_FrOQC-zEog">Weightless by Marconi Union</a>
+        <string name="excited_quote">
+        <![CDATA[<a href="https://www.goodreads.com/quotes/157464-live-your-life-with-passion">Live your life with passion, excitement, and energy. – Tony Robbins</a>]]>
     </string>
-    <string name="bored_song2">
-        <a href="https://www.youtube.com/watch?v=H1zNzwE_jFA">Clair de Lune by Claude Debussy</a>
+
+        <!-- bored -->
+        <!-- Songs -->
+        <string name="bored_song1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=_FrOQC-zEog">Weightless by Marconi Union</a>]]>
     </string>
 
-    <!-- Movies -->
-    <string name="bored_movie1">
-        <a href="https://www.imdb.com/title/tt0061184/">Playtime by Jacques Tati</a>
+        <string name="bored_song2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=H1zNzwE_jFA">Clair de Lune by Claude Debussy</a>]]>
     </string>
-    <string name="bored_movie2">
-        <a href="https://www.imdb.com/title/tt0048473/">The Red Balloon by Albert Lamorisse</a>
+
+        <!-- Movies -->
+        <string name="bored_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0061184/">Playtime by Jacques Tati</a>]]>
     </string>
 
-    <!-- Recipes -->
-    <string name="bored_recipe1">
-        <a href="https://www.simplyrecipes.com/recipes/how_to_make_tea/">How to Make Tea</a>
+        <string name="bored_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0048473/">The Red Balloon by Albert Lamorisse</a>]]>
     </string>
-    <string name="bored_recipe2">
-        <a href="https://minimalistbaker.com/how-to-make-oatmeal/">How to Make Oatmeal</a>
+
+        <!-- Recipes -->
+        <string name="bored_recipe1">
+        <![CDATA[<a href="https://www.simplyrecipes.com/recipes/how_to_make_tea/">How to Make Tea</a>]]>
     </string>
 
-    <!-- Workouts -->
-    <string name="bored_workout1">
-        <a href="https://www.youtube.com/watch?v=ST1bJICRqks">Simple Stretching Routine by Yoga with Adriene</a>
+        <string name="bored_recipe2">
+        <![CDATA[<a href="https://minimalistbaker.com/how-to-make-oatmeal/">How to Make Oatmeal</a>]]>
     </string>
-    <string name="bored_workout2">
-        <a href="https://www.youtube.com/watch?v=lc1Ag9m7XQo">Beginner's Tai Chi by Dr. Paul Lam</a>
+
+        <!-- Workouts -->
+        <string name="bored_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=ST1bJICRqks">Simple Stretching Routine by Yoga with Adriene</a>]]>
     </string>
 
-    <!-- Meditations -->
-    <string name="bored_meditation1">
-        <a href="https://www.youtube.com/watch?v=inpok4MKVLM">Guided 10-Minute Body Scan by Calm</a>
+        <string name="bored_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=lc1Ag9m7XQo">Beginner Tai Chi by Dr. Paul Lam</a>]]>
     </string>
-    <string name="bored_meditation2">
-        <a href="https://www.youtube.com/watch?v=ZToicYcHIOU">5-Minute Breath Awareness by Headspace</a>
+
+        <!-- Meditations -->
+        <string name="bored_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=inpok4MKVLM">Guided 10-Minute Body Scan by Calm</a>]]>
     </string>
 
-    <!-- Books -->
-    <string name="bored_book1">
-        <a href="https://www.goodreads.com/book/show/68428.The_Life_Changing_Magic_of_Tidying_Up">The Life-Changing Magic of Tidying Up by Marie Kondo</a>
+        <string name="bored_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=ZToicYcHIOU">5-Minute Breath Awareness by Headspace</a>]]>
     </string>
-    <string name="bored_book2">
-        <a href="https://www.goodreads.com/book/show/112978.Siddhartha">Siddhartha by Hermann Hesse</a>
+
+        <!-- Books -->
+        <string name="bored_book1">
+        <![CDATA[<a href="https://www.goodreads.com/book/show/68428.The_Life_Changing_Magic_of_Tidying_Up">The Life-Changing Magic of Tidying Up by Marie Kondo</a>]]>
     </string>
 
-    <!-- Quote -->
-    <string name="bored_quote1">
-        "Almost everything will work again if you unplug it for a few minutes, including you." - Anne Lamott
+        <string name="bored_book2">
+        <![CDATA[<a href="https://www.goodreads.com/book/show/112978.Siddhartha">Siddhartha by Hermann Hesse</a>]]>
     </string>
 
-    <!-- in love -->
+        <!-- Quote -->
+        <string name="bored_quote">
+        <![CDATA["Almost everything will work again if you unplug it for a few minutes, including you." - Anne Lamott]]>
+    </string>
 
-    <!-- Songs -->
-    <string name="inlove_song1">
-        <a href="https://www.youtube.com/watch?v=450p7goxZqg">Perfect by Ed Sheeran</a>
+        <!-- in love -->
+        <!-- Songs -->
+        <string name="inlove_song1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=450p7goxZqg">Perfect by Ed Sheeran</a>]]>
     </string>
-    <string name="inlove_song2">
-        <a href="https://www.youtube.com/watch?v=lrpXArn3hII">Can't Help Falling in Love by Elvis Presley</a>
+        <string name="inlove_song2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=lrpXArn3hII">Cannot Help Falling in Love by Elvis Presley</a>]]>
     </string>
 
-    <!-- Movies -->
-    <string name="inlove_movie1">
-        <a href="https://www.imdb.com/title/tt1022603/">The Notebook by Nick Cassavetes</a>
+        <!-- Movies -->
+        <string name="inlove_movie1">
+        <![CDATA[<a href="https://www.imdb.com/title/tt1022603/">The Notebook by Nick Cassavetes</a>]]>
     </string>
-    <string name="inlove_movie2">
-        <a href="https://www.imdb.com/title/tt0338013/">Eternal Sunshine of the Spotless Mind by Michel Gondry</a>
+        <string name="inlove_movie2">
+        <![CDATA[<a href="https://www.imdb.com/title/tt0338013/">Eternal Sunshine of the Spotless Mind by Michel Gondry</a>]]>
     </string>
 
-    <!-- Recipes -->
-    <string name="inlove_recipe1">
-        <a href="https://www.delish.com/cooking/recipe-ideas/a23515410/strawberry-shortcake-recipe/">Strawberry Shortcake</a>
+        <!-- Recipes -->
+        <string name="inlove_recipe1">
+        <![CDATA[<a href="https://www.delish.com/cooking/recipe-ideas/a23515410/strawberry-shortcake-recipe/">Strawberry Shortcake</a>]]>
     </string>
-    <string name="inlove_recipe2">
-        <a href="https://tasty.co/recipe/chocolate-covered-strawberries">Chocolate-Covered Strawberries</a>
+        <string name="inlove_recipe2">
+        <![CDATA[<a href="https://tasty.co/recipe/chocolate-covered-strawberries">Chocolate-Covered Strawberries</a>]]>
     </string>
 
-    <!-- Workouts -->
-    <string name="inlove_workout1">
-        <a href="https://www.youtube.com/watch?v=4pKly2JojMw">Couples Yoga Flow by Yoga with Adriene</a>
+        <!-- Workouts -->
+        <string name="inlove_workout1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=4pKly2JojMw">Couples Yoga Flow by Yoga with Adriene</a>]]>
     </string>
-    <string name="inlove_workout2">
-        <a href="https://www.youtube.com/watch?v=kp1RR5A6Ac8">Partner Workout Challenge by MadFit</a>
+        <string name="inlove_workout2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=kp1RR5A6Ac8">Partner Workout Challenge by MadFit</a>]]>
     </string>
 
-    <!-- Meditations -->
-    <string name="inlove_meditation1">
-        <a href="https://www.youtube.com/watch?v=a8Gr8gVaQ7o">Loving-Kindness Meditation by Calm</a>
+        <!-- Meditations -->
+        <string name="inlove_meditation1">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=a8Gr8gVaQ7o">Loving-Kindness Meditation by Calm</a>]]>
     </string>
-    <string name="inlove_meditation2">
-        <a href="https://www.youtube.com/watch?v=sz7cpV7ERsM">Guided Meditation for Self-Love and Relationships by The Honest Guys</a>
+        <string name="inlove_meditation2">
+        <![CDATA[<a href="https://www.youtube.com/watch?v=sz7cpV7ERsM">Guided Meditation for Self-Love and Relationships by The Honest Guys</a>]]>
     </string>
 
-    <!-- Books -->
-    <string name="inlove_book1">
-        <a href="https://www.goodreads.com/book/show/973693.Love_in_the_Time_of_Cholera">Love in the Time of Cholera by Gabriel García Márquez</a>
+        <!-- Books -->
+        <string name="inlove_book1">
+        <![CDATA[<a href="https://www.goodreads.com/book/show/973693.Love_in_the_Time_of_Cholera">Love in the Time of Cholera by Gabriel García Márquez</a>]]>
     </string>
-    <string name="inlove_book2">
-        <a href="https://www.goodreads.com/book/show/290932.The_Bridge_of_San_Luis_Rey">The Bridge of San Luis Rey by Thornton Wilder</a>
+        <string name="inlove_book2">
+        <![CDATA[<a href="https://www.goodreads.com/book/show/290932.The_Bridge_of_San_Luis_Rey">The Bridge of San Luis Rey by Thornton Wilder</a>]]>
     </string>
 
-    <!-- Quote -->
-    <string name="inlove_quote1">
-        "You know you're in love when you can't fall asleep because reality is finally better than your dreams." - Dr. Seuss
+        <!-- Quote -->
+        <string name="inlove_quote1">
+        <![CDATA["You know you're in love when you can't fall asleep because reality is finally better than your dreams." - Dr. Seuss]]>
     </string>
-
 
 </resources>

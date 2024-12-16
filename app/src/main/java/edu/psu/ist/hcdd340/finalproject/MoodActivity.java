@@ -1,7 +1,5 @@
 package edu.psu.ist.hcdd340.finalproject;
 
-
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,12 +12,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import edu.psu.ist.hcdd340.finalproject.R;
 
 public class MoodActivity extends AppCompatActivity {
 
@@ -28,6 +23,7 @@ public class MoodActivity extends AppCompatActivity {
     private TextView emojiHappyTwo, emojiSadTwo, emojiAngryTwo, emojiScaredTwo, emojiExcitedTwo, emojiBoredTwo, emojiLoveTwo;
     private LinearLayout emojiLayout;
     private TextView feelText;
+
     // Other views
     private Spinner reasonSpinner;
     private Spinner moodActionSpinner;
@@ -37,7 +33,6 @@ public class MoodActivity extends AppCompatActivity {
     // Selected emojis
     private String currentMood = "";
     private String desiredMood = "";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +48,11 @@ public class MoodActivity extends AppCompatActivity {
         // Set submit button listener
         submitButton.setOnClickListener(v -> handleSubmit());
 
+        // Bottom navigation
         BottomNavigationView bottomNavigation = findViewById(R.id.bottomNavigation);
         NavigationHelper.setupBottomNavigation(this, bottomNavigation);
 
-        // Set spinner listener
+        // Spinner listener
         moodActionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -75,10 +71,7 @@ public class MoodActivity extends AppCompatActivity {
                 emojiLayout.setVisibility(View.GONE);
                 feelText.setVisibility(View.GONE);
             }
-
         });
-
-
     }
 
     private void initializeViews() {
@@ -143,35 +136,19 @@ public class MoodActivity extends AppCompatActivity {
         String extraMessage = extraInput.getText().toString();
 
         // Simple validation
-        if (currentMood.isEmpty() || desiredMood.isEmpty()) {
-            showToast("Please select both your current and desired mood.");
+        if (desiredMood.isEmpty()) {
+            showToast("Please select your desired mood.");
             return;
         }
 
-        // Process the form submission
-        String summary = "Current Mood: " + currentMood + "\n"
-                + "Desired Mood: " + desiredMood + "\n"
-                + "Reason: " + reason + "\n"
-                + "Extra: " + extraMessage;
-
-        // Save log entry to SharedPreferences
+        // Save log entry
         SharedPreferences sharedPreferences = getSharedPreferences("MoodTrackerPrefs", MODE_PRIVATE);
-        String existingLogs = sharedPreferences.getString("moodLogs", "");
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("moodLogs", existingLogs + summary + "\n\n");
         editor.apply();
 
-        showToast("Mood logged successfully!");
-
-        // Display as a Toast (or handle as needed)
-        showToast(summary);
-
-        // Clear form fields
-        extraInput.setText("");
-
-        // Create an intent to navigate to suggestionsActivity and pass the selected mood
+        // Navigate to suggestionsActivity and pass the selected desired mood
         Intent intent = new Intent(MoodActivity.this, suggestionsActivity.class);
-        intent.putExtra("selectedMood", currentMood);  // Pass the currentMood to the next activity
+        intent.putExtra("selectedMood", desiredMood); // Pass desiredMood
         startActivity(intent);
     }
 
@@ -179,5 +156,3 @@ public class MoodActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 }
-
-
